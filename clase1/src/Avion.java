@@ -6,7 +6,8 @@ public class Avion {
 	private int codigoID;
 	private int cantidadDeAsientos;
 	private int cantidadDeTripulacion;
-	private double balance;
+	
+	Piloto p1;
 	
 	//CONSTRUCTOR DEL OBJETO
 	public Avion(){
@@ -18,7 +19,6 @@ public class Avion {
 		color = "blanco";
 		cantidadDeAsientos = 3;
 		cantidadDeTripulacion = 1;
-		balance = cantidadDeTripulacion/cantidadDeAsientos;
 	}
 	
 	public Avion(int codigo, int asientos, int tripulacion, String color){
@@ -27,6 +27,8 @@ public class Avion {
 		this.setColor(color);
 		this.setCantidadDeAsientos(asientos);
 		this.setCantidadDeTripulacion(tripulacion);
+		p1 = new Piloto("Juan",this);
+		
 	}
 	
 	//MÉTODOS
@@ -49,11 +51,18 @@ public class Avion {
 
 	public void setCantidadDeAsientos(int cantidadDeAsientos) {
 		this.cantidadDeAsientos = cantidadDeAsientos;
-		balance = cantidadDeTripulacion/cantidadDeAsientos;
 	}
 
 	public int getCantidadDeTripulacion() {
 		return cantidadDeTripulacion;
+	}
+
+	public Piloto getPiloto() {
+		return p1;
+	}
+
+	public void setPiloto(Piloto p1) {
+		this.p1 = p1;
 	}
 
 	public void setCantidadDeTripulacion(int cantidadDeTripulacion) {
@@ -63,10 +72,13 @@ public class Avion {
 		else{
 			this.cantidadDeTripulacion = cantidadDeTripulacion;
 		}
-		balance = cantidadDeTripulacion/cantidadDeAsientos;
 	}
 	
 	public double getBalance(){
-		return balance;
+		if (cantidadDeAsientos!=0){
+			return (double)cantidadDeTripulacion/(double)cantidadDeAsientos;
+		}else{
+			return 0;
+		}
 	}
 }

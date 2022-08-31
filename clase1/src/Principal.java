@@ -10,6 +10,12 @@ public class Principal {
 		System.out.println(air314.getColor());
 		System.out.println(air315.getColor());
 		System.out.println(air316.getColor());
+		System.out.println(air316.getBalance());
+		System.out.println(air314);
+		System.out.println(air315);
+		System.out.println(air316);
+		
+		System.out.println(air316.getPiloto().getNombre());
 	}
 	
 }
