@@ -17,12 +17,15 @@ public class Jugador {
 	public int getPuntos() {
 		return puntos;
 	}
-	public void sumarPuntos(int puntos) {
+	public void sumarPuntos() {
 		this.puntos++;
+	}
+	public int tirarDados(Dado d1, Dado d2){
+		//DELEGANDO RESPONSABILIDADES
+		return d1.tirar()+d2.tirar();
 	}
 	public int tirarDados(Cubilete cub){
 		//DELEGANDO RESPONSABILIDADES 
 		return cub.tirar();
 	}
-	
 }

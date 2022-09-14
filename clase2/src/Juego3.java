@@ -68,5 +68,4 @@ public class Juego3 {
 		}
 		return this.ganador();
 	}
-	
 }
