@@ -6,6 +6,11 @@ public class Circulo extends Figura {
 		super("Circulo");
 		this.radio = radio;
 	}
+	
+	public Circulo(double radio, String nombre) {
+		super(nombre);
+		this.radio = radio;
+	}
 
 	public double getRadio() {
 		return radio;

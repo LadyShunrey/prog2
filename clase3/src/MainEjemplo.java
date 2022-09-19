@@ -24,5 +24,10 @@ public class MainEjemplo {
 		MedioCirculo medio = new MedioCirculo(10);
 		
 		Imprimir(medio);
+		
+		//Figura h4;
+		
+		Figura3D nuevaFigura = new Figura3D(cc1, 10, "Cilindro");
+		
 	}
 }
