@@ -5,9 +5,7 @@ public class DadoCargado extends Dado {
 	private double probabilidad;
 	
 	public DadoCargado(int cantidadCaras, int ladoCargado){
-		super(cantidadCaras);
-		this.ladoCargado = ladoCargado;
-		probabilidad = 0.5;
+		this(cantidadCaras, ladoCargado, 0.7);
 	}
 	
 	public DadoCargado(int cantidadCaras, int ladoCargado, double dd){
@@ -35,7 +33,8 @@ public class DadoCargado extends Dado {
 	}*/
 
 	public int tirar(){
-		if (Math.random()>probabilidad){
+		
+		if (Math.random()>probabilidad){ 
 			return super.tirar();
 		}
 		else{
@@ -47,7 +46,7 @@ public class DadoCargado extends Dado {
 	public static void main (String[]args){
 		Dado d1 = new Dado(6);
 		DadoCargado d2 = new DadoCargado(6,6, 0.9);
-		DadoCargado d3 = new DadoCargado(6,1);
+		DadoCargado d3 = new DadoCargado(6,1, 0.5);
 		
 		for (int i = 0; i<20; i++){
 			System.out.println("d1: "+d1.tirar()+" - d2: "+d2.tirar());
