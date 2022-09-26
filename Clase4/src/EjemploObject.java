@@ -12,7 +12,7 @@ public class EjemploObject {
 		Jugador j2 = new Jugador ("Gonzalo");
 		
 		//j1 = j2; ESTO VA A DAR IGUALES
-		
+		 
 		if (j1 == j2){
 			System.out.println("Iguales 1");
 		}

@@ -33,4 +33,6 @@ public class Jugador {
 		String nombreAfuera = ((Jugador)o1).getNombre();
 		return nombre.equals(nombreAfuera);
 	}
+	
+	 
 }
