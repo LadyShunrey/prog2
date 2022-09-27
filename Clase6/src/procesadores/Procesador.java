@@ -19,7 +19,25 @@ public abstract class Procesador {
 		}
 	}
 	
-	public abstract void addTarea(Tarea t1);
+	//METODO TEMPLATE
+	public abstract boolean esMayor(Tarea t1, Tarea t2);
+	
+	public void addTarea(Tarea t1) {
+		
+		boolean encontro = false;
+		int i = 0;
+		while(!encontro && i<tareas.size()){
+			if(this.esMayor(t1,tareas.get(i))){
+				encontro = true;
+				tareas.add(i,t1);
+			}
+			i++;
+		}
+		if(!encontro){
+			tareas.add(i,t1);
+		}
+
+	}
 	
 	
 	
