@@ -1,6 +1,4 @@
-import clase5.ejemploThis.A;
-import clase5.ejemploThis.B;
-import clase5.ejemploThis.C;
+import clase5.ejemploThis.*;
 import clase5.otrosEjemplos.*;
 
 public class EjemploEjecutable {
