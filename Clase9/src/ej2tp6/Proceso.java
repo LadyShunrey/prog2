@@ -1,5 +1,6 @@
+package ej2tp6;
 
-public class Proceso extends ElementoCola {
+public class Proceso implements ElementoCola {
 	private String nombre;
 	private double memoriaRequerida;
 	
@@ -14,6 +15,13 @@ public class Proceso extends ElementoCola {
 
 	public double getMemoriaRequerida() {
 		return memoriaRequerida;
+	}
+
+	
+	
+	@Override
+	public boolean esMayor(ElementoCola otro) {
+		return this.getMemoriaRequerida() > ((Proceso) otro).getMemoriaRequerida();
 	}
 
 	@Override

@@ -1,8 +1,8 @@
-import java.util.ArrayList;
-
+package ej2tp6;
 
 public class Main {
 	public static void main(String[] args) {
+		
 		CentroComputo centro = new CentroComputo();
 		
 		Computadora compu1 = new Computadora("Lab1", 2560.0);
@@ -12,9 +12,5 @@ public class Main {
 		centro.addComputadora(compu1);
 		centro.addComputadora(compu2);
 		centro.addComputadora(compu3);
-		
-		ArrayList<Computadora> compus = centro.getComputadoras();
-		System.out.println(compus);
-		//compus.clear();
 	}
 }

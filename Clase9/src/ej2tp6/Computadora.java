@@ -1,16 +1,17 @@
+package ej2tp6;
 //import java.util.ArrayList;
 
 
-public class Computadora extends ElementoCola {
-	private String nombre;
-	//ArrayList<String> procesos;
-	//private int memoria; 
+public class Computadora implements ElementoCola {
+	private String nombre; 
 	private double velocidadCPU;
+	private Proceso proc;
 	
 	public Computadora(String nombre, double velocidadCPU) {
 		super();
 		this.nombre = nombre;
 		this.velocidadCPU = velocidadCPU;
+		proc = null;
 	}
 
 	public String getNombre() {
@@ -19,6 +20,15 @@ public class Computadora extends ElementoCola {
 
 	public double getVelocidadCPU() {
 		return velocidadCPU;
+	}
+	
+	public void ejecutarProceso(Proceso p){
+		this.proc = p;
+	}
+	
+	@Override
+	public boolean esMayor(ElementoCola otro) {
+		return this.getVelocidadCPU() > ((Computadora) otro).getVelocidadCPU();
 	}
 
 	@Override
