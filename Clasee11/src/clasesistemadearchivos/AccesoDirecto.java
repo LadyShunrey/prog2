@@ -16,7 +16,7 @@ public class AccesoDirecto extends ElementoFS {
 
 	@Override
 	public double getTamanio() {
-		return TAMANIO;
+		return TAMANIO; 
 	}
 
 	@Override
