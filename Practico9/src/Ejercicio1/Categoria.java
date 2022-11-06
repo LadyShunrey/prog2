@@ -19,6 +19,7 @@ public class Categoria{
 			resultado += elemento.contarNoticias();
 		}
 		return resultado;
+		
 	}
 	
 	public void addElemento(ElementosDelSitio elemento){

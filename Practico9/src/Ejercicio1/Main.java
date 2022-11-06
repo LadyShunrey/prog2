@@ -1,5 +1,10 @@
 package Ejercicio1;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -67,8 +72,28 @@ public class Main {
 		
 		System.out.println("La cantidad de noticias en la seccion 4 es: " + seccion4.contarNoticias());
 		
+		List<Seccion> lista = new ArrayList<Seccion>();
+		Set<Seccion> conjunto = new HashSet<Seccion>();
 		
-
+		conjunto.addAll(lista);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
