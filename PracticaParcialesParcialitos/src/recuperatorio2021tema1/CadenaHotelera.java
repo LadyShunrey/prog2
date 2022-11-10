@@ -33,7 +33,8 @@ public class CadenaHotelera {
 		for(ElementoHotel elemento: elementos){
 			lasQueCumplen.addAll(elemento.buscarHabitacionFiltro(filtro));
 		}
-		Collections.sort(lasQueCumplen, ordenador);
+		if (ordenador!=null)
+		 Collections.sort(lasQueCumplen, ordenador);
 		return lasQueCumplen;	
 	}
 	
@@ -45,7 +46,7 @@ public class CadenaHotelera {
 		return dimensionTotal;
 	}
 	
-	public void asignarTurista(Turista turista){
+	public void asignarTurista(Turista turista, Filtro filtro){
 		//recorre habitaciones
 		//si la habitacion cumple
 		//asigno turista
